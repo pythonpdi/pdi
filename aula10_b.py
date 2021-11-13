@@ -32,6 +32,7 @@ imshow(img, bands=(2,3,0))
 
 """**GDAL**"""
 
+# Visualizando com GDAL
 from osgeo import gdal
 import numpy as np
 
@@ -66,6 +67,7 @@ rst = rasterio.open('/content/L71221071_07120010720_DN.tif')
 
 print(rst)
 
+# Visualizando com rasterio
 show(rst, cmap='Greys_r')
 
 b1 = rst.read(1)
@@ -83,3 +85,4 @@ stack2 = np.dstack([b1,b2,b4])
 
 imshow(stack2, (1,2,0))
 
+# Fim de código
